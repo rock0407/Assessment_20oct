@@ -1,0 +1,262 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+.nav_bar {
+    width: 100%;
+    margin-bottom: 10vh;
+    box-shadow: 1px 1px 1px rgb(222, 217, 217);
+    background: white;
+    display: flex;          /* Use flexbox layout */
+    align-items: center;   /* Center items vertically */
+    justify-content: space-between; /* Space out elements evenly */
+    padding: 10px;        /* Optional: Add some padding */
+}
+
+.left, .middle, .right {
+    display: flex;          /* Use flex for left and right sections too if needed */
+    align-items: center;    /* Center items vertically */
+}
+
+.middle div {
+    font-size: 2.5vh;
+    margin: 0 10px;       /* Optional: Add spacing between menu items */
+}
+
+.heading{
+    margin-bottom: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+.line{
+    margin-bottom: 5vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+    text-align: center;
+}
+
+.below_line {
+    display: flex;          /* Arranges items side by side */
+    gap: 10px;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center;    /* Centers items vertically */
+    margin: auto;          /* Centers the whole flex container */
+    width: fit-content;    /* Shrinks to fit the content */
+}
+
+input[type="text"] {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;         /* Add some padding to the input */
+    font-size: 16px;       /* Font size for the input */
+}
+
+button {
+    border-radius: 10px;
+    background: #4c6ef5;
+    border: 0px;
+    border-radius: 5px;
+    padding: 10px 20px;    /* Add padding to the button */
+    font-size: 16px;        /* Font size for the button */
+    cursor: pointer;        /* Change cursor to pointer on hover */
+}
+.i{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.image{
+    border-radius: 50px;
+}
+
+.text2{
+    font-family: Arial, Helvetica, sans-serif;
+        font-size: 6vh;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10vh;
+}
+
+.image2 {
+    
+    padding-left: 45vh;
+    display: flex;               /* Use flexbox for layout */
+    flex-wrap: wrap;            /* Allow images to wrap to the next line */
+    justify-content: center;     /* Center the items horizontally */
+    margin: 0 auto;             /* Center the entire container */
+}
+
+.one, .two, .three {
+    display: flex;               /* Use flexbox for child containers */
+    flex-wrap: wrap;            /* Allow wrapping of images within each row */
+    width: 100%;                /* Take full width for each column */
+}
+
+.photo {
+    margin: 0;                  /* Remove margin to avoid gaps */
+    border-right: 1px solid #ccc; /* Right border for separation */
+    border-bottom: 1px solid #ccc; /* Bottom border for separation */
+    box-sizing: border-box;      /* Include padding and border in element's total width and height */
+    flex: 0 0 calc(12.5% - 1px); /* Set width to allow 8 images per line, accounting for borders */
+}
+
+/* Remove right border for the last image in each row */
+.photo:nth-child(8n) {
+    border-right: none; 
+}
+
+/* Remove bottom border for the last row of images */
+.photo:nth-last-child(-n + 8) {
+    border-bottom: none; 
+}
+
+/* Remove left and top borders from the first row and first column */
+.photo:nth-child(n + 1) {
+    border-top: none; /* Remove top border */
+}
+
+.photo:nth-child(8n + 1) {
+    border-left: none; /* Remove left border */
+}
+
+.photo img {
+    max-width: 100%;            /* Make sure images are responsive */
+    height: auto;               /* Maintain aspect ratio */
+}
+
+.A,.B,.C,.D{
+    width: 100%;
+    display: flex;
+    flex-flow: wrap row;
+    padding-top: 10vh;
+}
+
+.texts{
+    width: 40%;
+    display: flex;              /* Use flexbox for text alignment if needed */
+    justify-content: center;     /* Center text horizontally within this container */
+    align-items: center;
+}
+.im{
+    width: 60%;
+    display: flex;
+    justify-content: center;     /* Center images horizontally within this container */
+    align-items: center;
+}
+
+.fill{
+    color: #4c6ef5;
+}
+
+.line1{
+    font-family: Arial, Helvetica, sans-serif;
+        font-size: 4vh;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 10vh;
+}
+
+.line2{
+    font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+}
+
+#line3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vh;
+        text-align: left;
+}
+
+footer {
+    height: 40vh;
+
+    background-color: #121212;
+    color: #fff;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container {
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    max-width: 200px;
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    color: #4c6ef5;
+}
+
+.blocks{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    z-index: 10;
+    margin-bottom: -30px;
+}
+
+.block{
+    width: 150vh;
+    height: 40vh;
+    background-color: #d882cf;
+    align-self: center;
+    z-index: 10;
+    margin-bottom: -30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo{
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8vh;
+    font-weight: bold;
+}
